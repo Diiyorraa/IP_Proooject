@@ -31,7 +31,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+//require __DIR__.'/../vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +43,11 @@ require __DIR__.'/../vendor/autoload.php';
 | to this client's browser, allowing them to enjoy our application.
 |
 */
+
+$appFilePath = __DIR__.'/../bootstrap/app.php';
+echo "Resolved path for app.php: $appFilePath";
+$app = require_once $appFilePath;
+
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 

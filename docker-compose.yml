@@ -3,8 +3,8 @@ services:
   web:
     build: .
     ports:
-      - "8081:80"
+      - "8080:80"
     volumes:
-      - .:/var/www/html
+      - /host_mnt/c/Users/User/Projects/IP_Proooject/public:/var/www/html
     environment:
       - APP_ENV=development
